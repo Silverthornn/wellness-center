@@ -1,4 +1,4 @@
-import { StatusBar } from 'expo-status-bar';
+// import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View} from 'react-native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { NavigationContainer } from '@react-navigation/native';
@@ -11,7 +11,7 @@ export default function App({navigation}) {
   const Stack = createNativeStackNavigator()
   return (
     <NavigationContainer>
-      <Stack.Navigator>
+      <Stack.Navigator initialRouteName='welcome' screenOptions={{headerShown: false}}>
         <Stack.Screen name="welcome" component={welcomScreen}/>
         <Stack.Screen name="login" component={loginScreen}/>
         <Stack.Screen name="signup" component={signUpScreen}/>
@@ -21,8 +21,7 @@ export default function App({navigation}) {
     
   );
 }
-Text(
-);
+
 
 const styles = StyleSheet.create({
   container: {
