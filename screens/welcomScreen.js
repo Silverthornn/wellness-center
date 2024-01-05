@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, View, Button } from 'react-native'
 import React from 'react'
 import { NavigationContainer } from '@react-navigation/native'
 
@@ -6,6 +6,7 @@ const welcomScreen = ({navigation}) => {
   return (
     <View>
       <Text>welcomScreen</Text>
+      <Button title='Next' onPress={()=>navigation.navigate('login')} />
     </View>
   )
 }

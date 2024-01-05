@@ -3,14 +3,19 @@ import React from 'react'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import { Icon } from '@rneui/base'
 import homeScreen from './homeScreen'
+import settingScreen from './settingScreen'
 
 const bottomTabs = () => {
     const Tab = createBottomTabNavigator()
   return (
-    <Tab.Navigator>
-        <Tab.Screen name='home' component={homeScreen} options={{
+    <Tab.Navigator initialRouteName='home' screenOptions={{headerShown: false}}>
+        <Tab.Screen name='Home' component={homeScreen} options={{
             tabBarIcon: ({ color }) => (
-                <Icon name="home-filled" type="material" color={color} size={28} />
+                <Icon name="home" type="material" color={color} size={28} />
+              ),}} />
+        <Tab.Screen name='Settings' component={settingScreen} options={{
+            tabBarIcon: ({ color }) => (
+                <Icon name='person' type='material' color={color} size={28} />
               ),}} />
     </Tab.Navigator>
   )

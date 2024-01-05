@@ -1,10 +1,12 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { Button, Pressable, StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 
-const loginScreen = () => {
+const loginScreen = ({navigation}) => {
   return (
     <View>
       <Text>loginScreen</Text>
+      <Button title='Sign Up' onPress={()=>{navigation.navigate('signup')}}/>
+      <Button title='Next' onPress={()=>{navigation.navigate('bottomTabs')}}/>
     </View>
   )
 }
