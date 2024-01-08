@@ -20,4 +20,9 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
       },
+      buttonStyle:{
+        backgroundColor: 'lemon green',
+        margin: 10,
+        borderRadius: 20
+      }
 })
